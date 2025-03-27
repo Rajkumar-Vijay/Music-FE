@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   // Register user
   const register = async (userData) => {
     try {
-      const response = await fetch('http://music-be-bdt5.onrender.com/api/auth/user/register', {
+      const response = await fetch('https://music-be-bdt5.onrender.com/api/auth/user/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   // Login user
   const login = async (email, password) => {
     try {
-      const response = await fetch('http://music-be-bdt5.onrender.com/api/auth/user/login', {
+      const response = await fetch('https://music-be-bdt5.onrender.com/api/auth/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
   // Forgot password
   const forgotPassword = async (email) => {
     try {
-      const response = await fetch('http://music-be-bdt5.onrender.com/api/auth/user/forgot-password', {
+      const response = await fetch('https://music-be-bdt5.onrender.com/api/auth/user/forgot-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ export const AuthProvider = ({ children }) => {
   // Reset password
   const resetPassword = async (resetToken, password) => {
     try {
-      const response = await fetch(`http://music-be-bdt5.onrender.com/api/auth/user/reset-password/${resetToken}`, {
+      const response = await fetch(`https://music-be-bdt5.onrender.com/api/auth/user/reset-password/${resetToken}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
