@@ -44,7 +44,7 @@ export const PlayerContextProvider = ({ children }) => {
     const fetchAlbums = async () => {
       try {
         // const response = await axios.get('http://localhost:4000/api/album/list');
-        const response = await axios.get('http://music-be-bdt5.onrender.com/api/album/list');
+        const response = await axios.get('https://music-be-bdt5.onrender.com/api/album/list');
         setAlbumsData(response.data.albums || []);
       } catch (error) {
         console.error('Error fetching albums:', error);
@@ -62,7 +62,7 @@ export const PlayerContextProvider = ({ children }) => {
       if (user && user.token) {
         try {
           // Use the correct endpoint for fetching all playlists for the user
-          const response = await axios.get('http://music-be-bdt5.onrender.com/api/playlist', {
+          const response = await axios.get('https://music-be-bdt5.onrender.com/api/playlist', {
             headers: {
               Authorization: `Bearer ${user.token}`
             }
